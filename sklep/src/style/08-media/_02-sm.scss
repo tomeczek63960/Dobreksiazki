@@ -1,0 +1,14 @@
+@media screen and (min-width:700px){
+    @include utilities--sm;
+    @include icon--sm;
+    
+    @include page-footer--sm;
+    @include product-card--sm;
+    @include search-form--sm;
+    @include slider-template--sm;
+    @include flex-page-template--sm;
+    
+    @include product-page--sm;
+    @include about-page--sm;
+    @include basket-page--sm;
+}

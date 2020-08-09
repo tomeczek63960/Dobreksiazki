@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Roboto, sans-serif;;
+    font-size: 1.5rem;
+    background-color: #f0f0f0;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style:none;
+}
+button,
+input{
+    outline: none;
+    border:none;
+}
+
+.center-wrapper{
+    max-width:1350px;
+    margin:0 auto;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.u-display--ms{
+    display: none;
+}
+.u-display--sm{
+    display: none!important;
+}
+.u-display--xs{
+    display: block;
+}
+
+.text-gray{
+    color:$gray;
+}
+.text-blue{
+    color:$light-blue;
+}
+
+@mixin utilities--sm {
+    .center-wrapper{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .u-display--sm{
+        display: block!important;
+    }
+    .u-non-display--sm{
+        display: none!important;
+    }
+}
+
+@mixin utilities--ms {
+    .u-display--ms{
+        display: block;
+    }
+    .u-non-display--ms{
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,131 @@
+.about-page{
+    &__content{
+        margin-top: 15px;
+        background-color: $white;
+        padding: 15px;
+
+        &__img{
+            height:250px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__info{
+            h3{
+                margin-top: 20px;
+                font-size: 27px;
+            }
+            p{
+                margin-top: 25px;
+                color:$gray;
+                line-height: 2;
+            }
+        }
+
+    }
+
+    &__person-wrapper{
+        margin-top: 25px;
+        padding: 20px 15px;
+        width:100%;
+        overflow: hidden;
+        background-color: $white;
+      
+    }
+
+    &__person{
+        margin-top: 25px;
+        margin-right: 5px;
+        display: flex;
+        &__title{
+            font-size: 18px;
+        }
+        &__img{
+            margin-right: 20px;
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius:50%;
+            overflow: hidden;
+
+            img{
+                @extend %master-size;
+            }
+        }
+        &__description{
+            color:$gray;
+        }
+        &__name{
+            margin-top: 5px;
+            display: block;
+            color:#2ac;
+        }
+    }
+
+}
+
+.google-map__wrapper{
+    margin-top: 25px;
+    padding: 20px 0 0;
+    background-color: $white;
+    min-height: 350px;
+    
+    h3{
+        margin-left: 15px;
+        margin-bottom: 30px;
+    }
+
+}
+
+@mixin about-page--xs {
+    .about-page__content__img{
+        height: 300px;
+    }
+}
+
+@mixin about-page--sm {
+    .about-page{
+
+        &__content{
+            display: flex;
+            &__img{
+                max-width: 450px;
+                width:45%;
+                flex-shrink: 0;
+            }
+            &__info{
+                padding-left: 25px;
+                h1{
+                    margin-top: 0;
+                }
+            }
+        }
+        &__person-wrapper{
+            padding-bottom: 30px;
+        }
+        &__person{
+            width:49%;
+            max-width: 305px;
+
+            &__title{
+                font-size: 21px;
+            }
+
+        }
+        &__flex-container{
+            @include flex();
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+    }
+    
+}
+
+@mixin about-page--md {
+    .about-page__content__info{
+        padding-right: 40px;
+
+    }
+}

@@ -1,0 +1,250 @@
+.product-page{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    padding:10px;
+   
+    &__img{
+        margin: 0 auto;
+        position: relative;
+        width:175px;
+        height:260px;
+
+        img{
+            @extend %master-size;            
+        }
+        &-wrapper{
+            padding: 30px 0;
+        }
+    }
+    &__product{
+        min-width: 280px;
+        order:-1;
+        &__title{
+            margin-top: 5px;
+            border-bottom:1px solid $light-gray;
+            padding-bottom: 10px;
+        }
+        &__author{
+            margin-top: 5px;
+            color:$gray;
+        }
+    }
+    &__rates{
+        margin-top: 15px;
+        @include flex();
+
+        &-opinion{
+            margin-right: 7px;
+            color:#303030;
+           
+
+        }
+    }
+    &__social-media{
+        @include flex();
+        margin-top: 10px;
+
+        p{
+            margin-right: 10px;
+           
+        }
+    }
+
+    &__price{
+        margin-top: 20px;
+        color:$pink;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 1;
+        vertical-align: middle;
+
+        &-wrapper{
+            text-align: center;
+        }
+        &__content{
+            margin-top: 15px;
+            @include flex(center);
+        }
+        &__discount{
+            margin-left: 10px;;
+            font-size: 17px;
+            color:darken($color: $light-gray, $amount: 3%);
+            font-weight: 400;
+            text-decoration:line-through;
+        }
+        &__save{
+            font-size: 16px;
+            margin-left: 15px;
+            padding-left: 5px;
+            color:$light-gray;
+            border-left:1px solid lightgray;
+        }
+    }
+   
+    &__description{
+        margin-top: 20px;
+        padding: 15px;
+        background-color: $white;
+        
+        &__title{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        &__content{
+            line-height: 1.4;
+            max-width: 145ch;
+            margin-top: 10px;
+            color:#777;
+        }
+    }
+    
+    &__details{
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $white;
+
+        &--desctop{
+            display: none;
+            padding-left: 30px;
+            border-left:1px solid lightgray;
+        }
+        
+        &__title{
+            margin-bottom: 15px;
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+
+            border-bottom:1px solid $light-gray;
+            padding-bottom: 10px;
+        }
+
+         &__info{
+             color:#343434;
+             font-weight: normal;
+             text-transform: capitalize;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        &__info-heading{
+            @extend %first-letter--uppercase;
+            margin-bottom: 10px;
+            display: inline-block;  
+
+            color:$gray;
+            font-weight: 600;
+        }
+    }
+
+    .card__discount{
+        width:80px;
+        height:80px;
+        padding: 7px;
+    }
+
+    &__btn{
+        @extend %btn;
+        @extend %btn-outline;
+        padding: 11px;
+        margin-top: 20px;
+        width: 100%;
+        display: block;
+    
+        border: 1px solid  $light-blue;
+        transition:0.4s;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+    
+        &::first-letter{
+            text-transform: uppercase;
+        }
+       
+    
+    }
+   
+}
+
+
+@mixin product-page--sm {
+    .product-page{
+        flex-direction: row;
+        padding: 20px;
+
+        &__img{
+            margin: 0;
+            height: 100%;
+            max-height:275px;
+            width:200px;
+
+            &-wrapper{
+                padding: 0;
+            }
+        }
+
+        &__product{
+            order:0;
+            margin-left: 40px;
+        }
+        
+        &__product__title{
+            margin-top: 0;
+            line-height: 1.1;
+        }
+
+        &__price{
+            &-wrapper{
+                text-align: left;
+            }
+            &__content{
+                margin-top: 5px;
+                justify-content: flex-start;
+            }
+            &__discount{
+                margin-left: 0;
+            }
+        }
+       
+        &__description{
+            padding:15px 20px;
+        }
+        &__details__info{
+            font-size: 15px;
+        }
+    }
+    
+}
+
+@mixin product-page--ms {
+    .product-page{
+        &__description{
+
+            &__title{
+                font-weight: bold;
+            }
+            &__content{
+                line-height: 1.5;
+            }
+        }
+         
+        &__product{
+            margin-right: 35px;
+        }
+    }
+}
+
+@mixin product-page--md {
+    .product-page__details{
+        display: none;
+        
+        &--desctop{
+            display: block;
+        }
+        &__title{
+            margin-top: 0;
+            font-size: 18px;
+        }
+    }
+}

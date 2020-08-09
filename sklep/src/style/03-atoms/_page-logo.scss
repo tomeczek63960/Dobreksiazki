@@ -1,0 +1,40 @@
+.page-logo{
+    @include background-image("book.svg", left center, 45px 100%);
+    padding-left:50px;
+    height:40px;
+    display: inline-flex;
+    align-items: center;
+
+    color: $white;    
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Logo;
+    letter-spacing: 2px;
+    line-height: 1;
+    
+    &--large{
+        margin-top: 50px;
+        font-size: 25px;
+        height:55px;
+        color:$black;
+    }
+   
+    &--display-ms{
+        margin-right: 70px;
+        height: 65px;
+        display: none;
+    }
+}
+
+
+@mixin page-logo--ms {
+    .page-logo{
+        &--non-display-ms{
+            display: none;           
+        }
+        &--display-ms{
+            display: inline-flex;
+        }
+    }
+        
+}

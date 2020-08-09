@@ -1,0 +1,25 @@
+.flex-page-template{
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px 10px;
+
+    &__title{
+        font-size: 18px;
+        padding-left: 10px;
+        color:#303030;
+        text-transform: capitalize;
+    }
+
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+    }   
+
+}
+
+@mixin flex-page-template--sm {
+    .flex-page-template__title{
+        font-size: 22px;
+    }
+    
+}

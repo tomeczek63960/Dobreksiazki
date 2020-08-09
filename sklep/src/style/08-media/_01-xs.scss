@@ -1,0 +1,9 @@
+@media screen and (min-width:500px){
+    @include placeholders--xs;
+    @include product-card--xs;
+    @include about-page--xs;
+}
+
+@media screen and (min-width:550px){
+    @include basket-page--xss;
+}

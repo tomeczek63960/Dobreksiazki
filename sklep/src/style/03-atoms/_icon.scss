@@ -1,0 +1,31 @@
+.icon--social-media{
+    margin-right: 10px;
+    width:30px;
+    height: 30px;
+    display: block;
+    background-color: lighten($color: #F0F0F0, $amount: 0%);
+    text-indent: -9999px;
+    border-radius: 50%;
+
+}
+
+.icon--fb{
+    @include background-image('icon-facebook.svg',center center, 50%);
+}
+.icon--twitter{
+    @include background-image('icon-twitter.svg',center center, 50%);
+}
+.icon--mail{
+    @include background-image('icon-mail.svg',center center, 50%);
+}
+.icon--yt{
+    @include background-image('icon-youtube.svg',center center, 50%);
+}
+
+
+@mixin icon--sm {
+    .page-footer .icon--social-media{
+        width:40px;
+        height:40px;
+    }
+}

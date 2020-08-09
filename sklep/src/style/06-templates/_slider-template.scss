@@ -1,0 +1,83 @@
+.section-slider{
+    margin-top: 20px;
+    padding:5px 10px ;
+    position: relative;
+    background-color: $white;
+
+    &__heading{ 
+        @extend %first-letter--uppercase;
+        position: relative;
+        z-index: 100;
+        border-bottom:1px solid $light-gray;
+        font-size: 18px;
+        line-height: 2;
+    }
+}
+
+.slider {
+    margin-top:10px;
+    display: flex;
+    overflow-x: scroll ;
+    padding: 5px 0;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type-x: repeat(130px);
+    scroll-snap-type: x mandatory;
+    transition:1s;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    &-pagination{
+        &--disabled{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &__left, 
+        &__right{
+            @include absolute(50%, auto, auto, auto, (0, -50%) );
+            z-index: 10;
+            height: 100%;
+            width: 20px;
+            display: block;
+            background-color: rgba(255,255,255,0.5);
+            transition: 0.3s;
+            cursor: pointer;
+        
+            &::after{
+                @include absolute(50%,50%,auto,auto,(-50%,-50%));
+                @include background-image('icon-arrow-down-black.svg');
+                content:"";
+                height:15px;
+                width:15px;
+                display: block;
+            }
+        }
+        
+        &__left{
+            left:0px;
+        
+            &::after{
+                transform:translate(-50%,-50%) rotate(90deg);
+            }
+        } 
+        &__right{
+            right:0px;
+        
+            &::after{
+                transform:translate(-50%,-50%) rotate(-90deg);
+            }
+        }
+
+    }
+    
+}
+
+@mixin slider-template--sm {
+    .section-slider__heading{
+        font-size: 21px;
+    }
+}

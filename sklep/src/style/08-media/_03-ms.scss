@@ -1,0 +1,15 @@
+@media screen and (min-width:900px){
+    @include utilities--ms;
+    
+    @include bars--ms;
+    @include page-logo--ms;
+
+    @include header--ms;
+    @include page-header__basket--ms;
+    @include page-nav--ms;
+    @include product-card--ms;
+    @include search-form--ms;
+
+
+    @include product-page--ms;
+}

@@ -1,0 +1,7 @@
+.advertise{
+    @extend %master-size;
+    margin-top: 20px;
+    img{
+        @extend %master-size;
+    }
+}

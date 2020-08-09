@@ -1,0 +1,37 @@
+@mixin background-image($url,$position:center center ,$size:contain,$repeat:no-repeat){
+    
+    background-image:url("../assets/#{$url}");
+    background-position:$position;
+    background-size: $size;
+    background-repeat: $repeat;
+}
+
+@mixin absolute($top:auto,$left:auto,$bottom:auto,$right:auto,$translate:auto) {
+    position: absolute;
+    @if($top != auto){
+        top:$top;
+    }
+    @if($left != auto){
+        left:$left;
+    }
+    @if($bottom != auto){
+        bottom:$bottom
+    }
+    @if($right != auto){
+        right:$right;
+    }
+    @if($translate != auto){
+        transform: translate($translate);
+    }
+    
+}
+
+@mixin flex($justify:flex-start,$align:center,$direction:auto){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @if($direction != auto){
+        flex-direction:$direction;
+    }
+
+}
