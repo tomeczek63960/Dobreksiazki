@@ -2,7 +2,7 @@
 ![Page](https://res.cloudinary.com/tomeczek123/image/upload/v1598354631/screencapture-dobre-ksiazki-herokuapp-2020-08-25-13_20_33_vivk1l.png)
 
 # Demo
-[https://dobre-ksiazki.herokuapp.com/](https://dobre-ksiazki.herokuapp.com/)
+[https://dobreksiazki.herokuapp.com/](https://dobreksiazki.herokuapp.com/)
 
 # Technologies
   
